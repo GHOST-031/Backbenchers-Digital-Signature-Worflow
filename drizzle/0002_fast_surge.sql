@@ -1,0 +1,2 @@
+CREATE UNIQUE INDEX "signers_one_active_per_doc_uq" ON "signers" USING btree ("document_id") WHERE "signers"."status" = 'ACTIVE';--> statement-breakpoint
+ALTER TABLE "document_views" ADD CONSTRAINT "views_exactly_one_actor_check" CHECK (("document_views"."signer_id" is null) <> ("document_views"."user_id" is null));

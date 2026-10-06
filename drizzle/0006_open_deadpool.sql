@@ -1,0 +1,1 @@
+ALTER TABLE "signatures" ADD CONSTRAINT "signatures_method_value_check" CHECK (("signatures"."method" = 'TYPED' and "signatures"."value" is not null and length(btrim("signatures"."value")) between 1 and 200 and "signatures"."image_object_key" is null) or ("signatures"."method" = 'DRAWN' and "signatures"."value" is null and "signatures"."image_object_key" like 'signatures/%'));

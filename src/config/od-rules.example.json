@@ -1,0 +1,10 @@
+{
+  "label": "Example local configuration — not official university policy",
+  "requiredFields": [
+    "purpose",
+    "dateRange",
+    "destinationOrEvent",
+    "supportingInformation"
+  ],
+  "consistencyChecks": ["dateRange.start must not be after dateRange.end"]
+}

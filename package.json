@@ -1,0 +1,48 @@
+{
+  "name": "od-signing-rebuild",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "format": "prettier --write 'src/**/*.{ts,tsx,css,json}' '*.ts' '*.mjs' '*.json' 'tests/**/*.ts' 'scripts/**/*.mjs'",
+    "format:check": "prettier --check 'src/**/*.{ts,tsx,css,json}' '*.ts' '*.mjs' '*.json' 'tests/**/*.ts' 'scripts/**/*.mjs'",
+    "db:migrate": "drizzle-kit migrate",
+    "db:generate": "drizzle-kit generate",
+    "db:check": "drizzle-kit check",
+    "setup:local": "node scripts/setup-local.mjs"
+  },
+  "dependencies": {
+    "dotenv": "^16.6.1",
+    "drizzle-orm": "^0.45.3",
+    "next": "^16.3.8",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^6.2.108",
+    "pg": "^8.16.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "zod": "^4.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.16.5",
+    "@types/pg": "^8.15.5",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.7",
+    "drizzle-kit": "^0.31.4",
+    "eslint": "^9.39.5",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.71.1",
+    "vitest": "^5.0.3"
+  },
+  "overrides": {
+    "braces": "^3.0.3",
+    "esbuild": "^0.25.0"
+  }
+}
